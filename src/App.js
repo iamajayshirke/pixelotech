@@ -1,15 +1,15 @@
 import { Box, Container } from "@mui/system";
 import "./App.css";
+import DetailBox from "./components/DetailBox";
 import Header from "./components/header";
 
 function App() {
   return (
-    <div className="App">
-      <Container maxWidth="lg">
+    <div className="App" >
+      <Container maxWidth="lg" sx={{ height: "100vh" }}>
         <Header/>
-        <Box sx={{ bgcolor: "#cfe8fc", height: "100vh" }}>
-          <p>Pixelotech Assignment</p>
-        </Box>
+        <DetailBox/>
+        
       </Container>
     </div>
   );

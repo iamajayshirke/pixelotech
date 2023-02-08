@@ -1,23 +1,22 @@
 import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import "./header.css"
+import { Button, Grid, IconButton, Menu, Typography } from '@mui/material';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Avatar from '@mui/material/Avatar';
+import { styled, alpha } from '@mui/material/styles';
+import SearchIcon from '@mui/icons-material/Search';
+import Badge from '@mui/material/Badge';
+import blizLogo from "../assets/BlizpushLogoNew.png"
+import profile from "../assets/AvatarImg.jpeg"
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Home', 'Gallery', 'Shop', "Contact"];
+// const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Header() {
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -36,29 +35,46 @@ function Header() {
     setAnchorElUser(null);
   };
 
-  return (
-    <AppBar position="static" className='appBar'>
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            BIZPUSH
-          </Typography>
+  const Search = styled('div')(({ theme }) => ({
+    position: 'relative',
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: alpha(theme.palette.common.white, 0.15),
+    '&:hover': {
+      backgroundColor: alpha(theme.palette.common.white, 0.25),
+    },
+    marginLeft: 0,
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing(1),
+      width: 'auto',
+    },
+  }));
 
+  const StyledBadge = styled(Badge)(({ theme }) => ({
+    '& .MuiBadge-badge': {
+      right: -3,
+      top: 3,
+      border: `2px solid ${theme.palette.background.paper}`,
+      padding: '0 4px',
+    },
+  }));
+
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={2} sx={{ padding: "20px 0px", height: '85px' }}>
+        {/* Logo Part */}
+        <Grid item xs={6} md={3} sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center',display: { xs: 'none', md: 'flex' } }}>
+          <Box
+            sx={{
+              backgroundImage: `url(${blizLogo})`,
+              width: 50, height: 50, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover'
+            }}></Box>
+          <Box><Typography sx={{
+            color: '#677DA8', fontFamily: 'Rubik, sans-serif', fontSize: '1.5rem'
+          }}>BIZPUSH</Typography></Box>
+        </Grid>
+        {/* Tabs */}
+        <Grid item xs={6} md={6} sx={{ textAlign: 'center' }}>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -95,69 +111,45 @@ function Header() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{
+            flexGrow: 1, display: {
+              xs: 'none', md: 'flex', display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap:'15px'
+            }
+          }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, display: 'block', color: "#4D4D4D" }}
               >
                 {page}
               </Button>
             ))}
           </Box>
+        </Grid>
+        {/* Cart and Avatars */}
+        <Grid item xs={6} md={3} sx={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '15px' }}>
+          <Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+            <SearchIcon sx={{ color: '#4D4D4D' }} />
+
           </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+          <Box>
+            <IconButton aria-label="cart">
+              <StyledBadge badgeContent={4} color="secondary">
+                <ShoppingCartIcon sx={{ color: '#4D4D4D' }} fontSize="small" />
+              </StyledBadge>
+            </IconButton>
+          </Box>
+          <Box>
+            <Avatar alt="Ajay Shirke" src={profile} />
+          </Box>
+        </Grid>
+      </Grid>
+    </Box>
   );
 }
 export default Header;
