@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/pixelotech/static/css/main.7bf2df69.css",
+    "main.js": "/pixelotech/static/js/main.779c58c2.js",
+    "static/js/787.f376acf5.chunk.js": "/pixelotech/static/js/787.f376acf5.chunk.js",
+    "static/media/NikeBlue.png": "/pixelotech/static/media/NikeBlue.c72f62f119bb9a4515ad.png",
+    "static/media/NikeBlue1.png": "/pixelotech/static/media/NikeBlue1.56ddb1d4e5867d944185.png",
+    "static/media/NikeRed2.png": "/pixelotech/static/media/NikeRed2.8222f0cf5966488a94cd.png",
+    "static/media/NikeRed.png": "/pixelotech/static/media/NikeRed.e66dbfc2759086024706.png",
+    "static/media/NikeBlue2.png": "/pixelotech/static/media/NikeBlue2.6a56463ad44e9f810b06.png",
+    "static/media/shadow.png": "/pixelotech/static/media/shadow.68c8ab1cb3c7ed3aa40c.png",
+    "static/media/monitor.png": "/pixelotech/static/media/monitor.393d2a29d9ddd297e1b5.png",
+    "static/media/AvatarImg.jpeg": "/pixelotech/static/media/AvatarImg.9465a619f261630148f3.jpeg",
+    "static/media/macbook.png": "/pixelotech/static/media/macbook.2f717c5fd32055c91987.png",
+    "static/media/macbook2.png": "/pixelotech/static/media/macbook2.89878fd518e6b9bc9a33.png",
+    "static/media/applewatch.png": "/pixelotech/static/media/applewatch.b9438f531ac06cf681e0.png",
+    "static/media/echo.png": "/pixelotech/static/media/echo.c609bffebd6e8f48ba8d.png",
+    "static/media/macbook3.png": "/pixelotech/static/media/macbook3.ea4850718f4e4f4c11b0.png",
+    "static/media/samwatch2.png": "/pixelotech/static/media/samwatch2.5b8fb107f6e1dbafc7de.png",
+    "static/media/imacpro.png": "/pixelotech/static/media/imacpro.972c1dcfba765bdba6c7.png",
+    "index.html": "/pixelotech/index.html",
+    "main.7bf2df69.css.map": "/pixelotech/static/css/main.7bf2df69.css.map",
+    "main.779c58c2.js.map": "/pixelotech/static/js/main.779c58c2.js.map",
+    "787.f376acf5.chunk.js.map": "/pixelotech/static/js/787.f376acf5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7bf2df69.css",
+    "static/js/main.779c58c2.js"
+  ]
+}
