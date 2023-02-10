@@ -8,7 +8,7 @@
   height: 131.44px;
   top: 400px;
   background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
-  mix-blend-mode: normal;
+  /* mix-blend-mode: normal; */
   opacity: 0.8;
 }
 
@@ -53,18 +53,96 @@
 
 .reviewBox {
   position: absolute;
-    left: 65%;
-    top: 75px;
+  left: 65%;
+  top: 75px;
 }
 
-.arrowLine{width: 39%;
-    height: 100px;
+.arrowLine {
+  width: 39%;
+  height: 100px;
+  background-repeat: no-repeat;
+  -webkit-background-position: center;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 46px;
+  left: 172px;
+}
+.spanHeader {
+  color: #677da8;
+  font-size: 1.9rem;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+.starIcon {
+  color: #a61473;
+  font-size: 2rem;
+}
+.reviewText {
+  color: #677da8;
+  font-size: 0.8rem;
+}
+.displayImg{
+    
+    width: 30rem;
+    height: 30rem;
     background-repeat: no-repeat;
-    -webkit-background-position: center;
     background-position: center;
-    -webkit-background-size: cover;
     background-size: cover;
-    position: absolute;
-    top: 46px;
-    left: 172px;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    line-height: 1.2 !important;
+    font-size: 2.7rem !important;
+  }
+  .headerBody {
+    line-height: 1.5 !important;
+    font-size: 0.7rem !important;
+  }
+  .buttonText {
+    padding: 7px 22px !important;
+    font-size: 15px !important;
+  }
+  .arrowLine {
+    width: 32% !important;
+    height: 58px !important;
+    top: 25px !important;
+    left: 86px !important;
+  }
+  .reviewBox {
+    left: 65%;
+    top: 40px;
+  }
+  .spanHeader {
+    font-size: 1.2rem;
+  }
+  .starIcon {
+    font-size: 1rem !important;
+  }
+  .reviewText{
+    font-size: 0.5rem !important;
+  }
+  .displayImg{
+    width: 18rem;
+    height: 17rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: 10rem;
+}
+.shadowCircle {
+  position: absolute;
+  width: 40rem;
+  height: 20rem;
+  top: 250px;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 }

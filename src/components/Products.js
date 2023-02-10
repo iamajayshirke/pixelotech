@@ -8,7 +8,7 @@ import shoe4 from "../assets/fig/NikeBlue2.png";
 import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded";
 import StarRoundedIcon from "@mui/icons-material/StarRounded";
 
-function Products() {
+function Products() { 
   const product = [
     {
       photo: shoe1,
@@ -36,7 +36,7 @@ function Products() {
     },
   ];
   return (
-    <Box sx={{ flexGrow: 1, marginTop: "80px" }}>
+    <Box sx={{ flexGrow: 1, }} className='productMain'>
       <Grid container disableGutters spacing={2} sx={{ padding: "20px 0px" }}>
         <Grid
           item
@@ -61,13 +61,8 @@ function Products() {
             }}
           >
             <Typography
-              sx={{
-                color: "#677DA8",
-                fontWeight: 700,
-                fontSize: "2.7rem",
-                fontFamily: "Rubik, sans-serif",
-                textTransform: "uppercase",
-              }}
+            className="productTitle"
+              
             >
               Popular Products
             </Typography>
@@ -101,6 +96,7 @@ function Products() {
                       flexDirection: "column",
                       alignItems: "flex-start",
                       justifyContent: "center",
+                      marginBottom: "30px"
                     }}
                   >
                     <Box className="cardImage">

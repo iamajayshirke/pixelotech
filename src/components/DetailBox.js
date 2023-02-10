@@ -53,6 +53,7 @@ function DetailBox() {
             <Box sx={{ width: "80%" }}>
               {" "}
               <Typography
+                className="header"
                 sx={{
                   color: "#677DA8",
                   fontWeight: 700,
@@ -70,6 +71,7 @@ function DetailBox() {
             </Box>
             <Box>
               <Typography
+                className="headerBody"
                 sx={{
                   color: "#677DA8",
                   fontSize: "0.9rem",
@@ -96,6 +98,7 @@ function DetailBox() {
               <Box>
                 <Button className="shopBtn" onClick={handleClick}>
                   <Typography
+                    className="buttonText"
                     sx={{
                       color: "#677DA8",
                       textTransform: "none",
@@ -132,23 +135,15 @@ function DetailBox() {
                       lineHeight: "normal !important",
                     }}
                   >
-                    <span
-                      style={{
-                        color: "#677DA8",
-                        fontSize: "1.9rem",
-                        fontWeight: "700",
-                        fontFamily: "sans-serif",
-                      }}
-                    >
-                      4.3
-                    </span>
+                    <span className="spanHeader">4.3</span>
                     <Stars times={5}>
-                      <StarIcon sx={{ color: "#A61473", fontSize: "2rem" }} />
+                      <StarIcon className="starIcon" sx={{  }} />
                     </Stars>
                   </Typography>
                   <Typography
                     textAlign="center"
-                    sx={{ color: "#677DA8", fontSize: "0.8rem" }}
+                    className="reviewText"
+                   
                   >
                     (11.6k Total Review)
                   </Typography>
@@ -181,13 +176,9 @@ function DetailBox() {
             }}
           >
             <Box
+            className="displayImg"
               sx={{
                 backgroundImage: `url(${Nike1})`,
-                width: "30rem",
-                height: "30rem",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                backgroundSize: "cover",
               }}
             ></Box>
             <Box
