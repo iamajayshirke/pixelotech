@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pixelotech/static/css/main.7bf2df69.css",
-    "main.js": "/pixelotech/static/js/main.779c58c2.js",
+    "main.js": "/pixelotech/static/js/main.8fcc09bd.js",
     "static/js/787.f376acf5.chunk.js": "/pixelotech/static/js/787.f376acf5.chunk.js",
     "static/media/NikeBlue.png": "/pixelotech/static/media/NikeBlue.c72f62f119bb9a4515ad.png",
     "static/media/NikeBlue1.png": "/pixelotech/static/media/NikeBlue1.56ddb1d4e5867d944185.png",
@@ -20,11 +20,11 @@
     "static/media/imacpro.png": "/pixelotech/static/media/imacpro.972c1dcfba765bdba6c7.png",
     "index.html": "/pixelotech/index.html",
     "main.7bf2df69.css.map": "/pixelotech/static/css/main.7bf2df69.css.map",
-    "main.779c58c2.js.map": "/pixelotech/static/js/main.779c58c2.js.map",
+    "main.8fcc09bd.js.map": "/pixelotech/static/js/main.8fcc09bd.js.map",
     "787.f376acf5.chunk.js.map": "/pixelotech/static/js/787.f376acf5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7bf2df69.css",
-    "static/js/main.779c58c2.js"
+    "static/js/main.8fcc09bd.js"
   ]
 }
