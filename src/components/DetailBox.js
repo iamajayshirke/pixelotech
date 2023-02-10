@@ -7,8 +7,10 @@ import Nike1 from "../assets/fig/NikeBlue.png";
 import Shadow from "../assets/fig/shadow.png";
 import StarIcon from "@mui/icons-material/Star";
 import arrow from "../assets/fig/arrow.png";
+import { useNavigate } from "react-router";
 
 function DetailBox() {
+  let navigate = useNavigate();
   function Stars({ children, times }) {
     const keys = [...Array(times).keys()];
     return (
@@ -27,15 +29,13 @@ function DetailBox() {
     );
   }
 
+  const handleClick = () => {
+    navigate("/dashboard");
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
-
-      <Grid
-        container
-        disableGutters
-        spacing={2}
-        sx={{ padding: "20px 0px" }}
-      >
+      <Grid container disableGutters spacing={2} sx={{ padding: "20px 0px" }}>
         <Grid
           item
           xs={6}
@@ -94,7 +94,7 @@ function DetailBox() {
               }}
             >
               <Box>
-                <Button className="shopBtn">
+                <Button className="shopBtn" onClick={handleClick}>
                   <Typography
                     sx={{
                       color: "#677DA8",
@@ -218,7 +218,6 @@ function DetailBox() {
         </Grid>
       </Grid>
       {/* Products Box */}
-      
     </Box>
   );
 }

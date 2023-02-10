@@ -2,7 +2,7 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import React from "react";
 import "./products.css";
 import shoe1 from "../assets/fig/NikeBlue1.png";
-import shoe2 from "../assets/fig/NikeRed.png";
+import shoe2 from "../assets/fig/NikeRed.png"; 
 import shoe3 from "../assets/fig/NikeRed2.png";
 import shoe4 from "../assets/fig/NikeBlue2.png";
 import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded";

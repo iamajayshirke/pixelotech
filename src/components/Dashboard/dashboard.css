@@ -1,0 +1,64 @@
+.profileTab {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:10px
+}
+
+.flexRow{
+    display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:10px
+}
+
+.flexColumn{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:10px
+}
+
+.boxShadowIcon{
+    box-shadow: 0px 2px 5px rgba(38, 51, 77, 0.03);
+    background-color:'#ffffff';
+    color:'#C3CAD9'
+}
+
+.svgIcon{
+    height: 0.6em;
+    width: 0.6em;
+}
+.flexBetween{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap:10px
+}
+
+.MuiButtonBase-root-MuiTab-root{
+    font-weight: 700;
+    font-family: "Rubik";
+}
+
+.groupBtns{
+    border: 2px solid #F5F6F7;
+}
+
+.groupBtns:hover{
+        border-color: '#0062cc';
+        box-shadow: 'none';
+      
+}
+.toggleView{
+
+}
+
+.css-1u1kna0-MuiButtonBase-root-MuiToggleButton-root.Mui-selected {
+    color: #6B7A99;
+    background-color: rgba(25, 118, 210, 0.08);
+}

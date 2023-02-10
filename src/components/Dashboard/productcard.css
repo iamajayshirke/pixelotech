@@ -1,0 +1,9 @@
+.productCard {
+  position: relative;
+  padding: 5px;
+
+  
+  background: #fafbfc;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
